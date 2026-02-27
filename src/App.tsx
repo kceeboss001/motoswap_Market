@@ -5,9 +5,10 @@ import LiquidityPool from './components/LiquidityPool';
 import FarmPanel from './components/FarmPanel';
 import MarketTicker from './components/MarketTicker';
 import BlockSwapGame from './components/BlockSwapGame';
+import Shop from './components/Shop';
 import './App.css';
 
-type Page = 'swap' | 'pool' | 'farm' | 'game';
+type Page = 'swap' | 'pool' | 'farm' | 'game' | 'shop';
 
 function App() {
   const [page, setPage] = useState<Page>('swap');
@@ -27,6 +28,9 @@ function App() {
         {page === 'pool' && <LiquidityPool walletAddress={walletAddress} />}
         {page === 'farm' && <FarmPanel walletAddress={walletAddress} />}
         {page === 'game' && <BlockSwapGame />}
+        {page === 'shop' && (
+          <Shop walletAddress={walletAddress} onWalletConnect={setWalletAddress} />
+        )}
       </main>
       <footer className="app-footer">
         <div className="footer-inner">

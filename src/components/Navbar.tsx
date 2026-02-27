@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { connectWallet } from '../utils/opnet';
 import './Navbar.css';
 
-type Page = 'swap' | 'pool' | 'farm' | 'game';
+type Page = 'swap' | 'pool' | 'farm' | 'game' | 'shop';
 
 interface NavbarProps {
   page: Page;
@@ -47,7 +47,7 @@ export default function Navbar({ page, onNavigate, walletAddress, onWalletConnec
 
         {/* Nav links */}
         <div className="navbar-links">
-          {(['swap', 'pool', 'farm', 'game'] as Page[]).map(p => (
+          {(['swap', 'pool', 'farm', 'shop', 'game'] as Page[]).map(p => (
             <button
               key={p}
               className={`nav-link ${page === p ? 'active' : ''}`}
@@ -56,6 +56,7 @@ export default function Navbar({ page, onNavigate, walletAddress, onWalletConnec
               {p === 'swap' && '⇄ Swap'}
               {p === 'pool' && '◉ Pools'}
               {p === 'farm' && '🌾 Farm'}
+              {p === 'shop' && '🛍️ Shop'}
               {p === 'game' && '🎮 Block Blast'}
               {page === p && <span className="nav-active-dot" />}
             </button>
