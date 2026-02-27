@@ -1,0 +1,278 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(8, 8, 16, 0.85);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.navbar-inner {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+/* Logo */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.logo-icon {
+  width: 36px;
+  height: 36px;
+  background: linear-gradient(135deg, var(--btc-orange), #e8820f);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  box-shadow: 0 0 16px rgba(247,147,26,0.4);
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+.logo-btc {
+  color: #000;
+  font-weight: 900;
+}
+
+.logo-text {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 20px;
+  letter-spacing: -0.02em;
+}
+
+.logo-moto { color: var(--btc-orange); }
+.logo-swap { color: var(--opnet-cyan); }
+
+.logo-badge {
+  font-size: 9px;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  color: var(--opnet-cyan);
+  border: 1px solid rgba(0,212,170,0.4);
+  padding: 2px 5px;
+  border-radius: 4px;
+  letter-spacing: 0.05em;
+  background: rgba(0,212,170,0.08);
+}
+
+/* Nav links */
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.nav-link {
+  position: relative;
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 14px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.nav-link:hover {
+  color: var(--text-primary);
+  background: rgba(255,255,255,0.05);
+}
+
+.nav-link.active {
+  color: var(--btc-orange);
+  background: rgba(247,147,26,0.1);
+  font-weight: 600;
+}
+
+.nav-active-dot {
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 4px;
+  background: var(--btc-orange);
+  border-radius: 50%;
+  box-shadow: 0 0 6px var(--btc-orange);
+}
+
+/* Right side */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: auto;
+}
+
+/* Network selector */
+.network-selector {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-size: 12px;
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  transition: all 0.2s;
+}
+
+.network-selector:hover {
+  border-color: var(--border-active);
+  color: var(--text-primary);
+}
+
+.network-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.network-dot.mainnet {
+  background: var(--opnet-cyan);
+  box-shadow: 0 0 6px var(--opnet-cyan);
+}
+
+.network-dot.testnet {
+  background: #F7931A;
+  box-shadow: 0 0 6px #F7931A;
+}
+
+.dropdown-arrow {
+  font-size: 9px;
+  margin-left: 2px;
+}
+
+.network-dropdown {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-active);
+  border-radius: var(--radius-md);
+  padding: 6px;
+  min-width: 160px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+  z-index: 200;
+}
+
+.network-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 13px;
+  color: var(--text-secondary);
+  transition: all 0.15s;
+}
+
+.network-option:hover {
+  background: rgba(247,147,26,0.1);
+  color: var(--text-primary);
+}
+
+/* Gas badge */
+.gas-badge {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 10px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  font-size: 12px;
+  font-family: var(--font-mono);
+  color: var(--opnet-cyan);
+}
+
+.gas-icon { font-size: 11px; }
+
+/* Connect button */
+.connect-btn {
+  padding: 8px 18px;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.btn-loading {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.spinner {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: 2px solid rgba(0,0,0,0.2);
+  border-top-color: #000;
+  border-radius: 50%;
+  animation: spin-slow 0.6s linear infinite;
+}
+
+/* Wallet connected */
+.wallet-connected {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  background: rgba(247,147,26,0.08);
+  border: 1px solid rgba(247,147,26,0.3);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.wallet-connected:hover {
+  background: rgba(247,147,26,0.15);
+  border-color: var(--btc-orange);
+}
+
+.wallet-avatar {
+  width: 24px;
+  height: 24px;
+  background: linear-gradient(135deg, var(--btc-orange), var(--opnet-cyan));
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 9px;
+  font-weight: 700;
+  color: #000;
+}
+
+.wallet-addr {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--btc-orange);
+}
+
+@media (max-width: 768px) {
+  .navbar-inner { gap: 16px; padding: 0 14px; }
+  .navbar-links { display: none; }
+  .gas-badge { display: none; }
+  .logo-badge { display: none; }
+}

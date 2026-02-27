@@ -1,0 +1,299 @@
+.farm-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.farm-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.farm-title {
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  background: linear-gradient(135deg, #fff 0%, #FF4B6E 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.farm-subtitle {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-top: 2px;
+}
+
+.farm-reward-summary {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 18px;
+  flex-shrink: 0;
+}
+
+.reward-icon { font-size: 28px; }
+
+.reward-title {
+  font-size: 11px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.reward-val {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 800;
+  color: #FF4B6E;
+}
+
+/* Harvest all */
+.harvest-all-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+}
+
+.harvest-label {
+  font-size: 12px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.harvest-value {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--btc-orange);
+  margin-top: 2px;
+}
+
+.harvest-btn {
+  padding: 9px 20px;
+  font-size: 14px;
+}
+
+/* Tabs */
+.farm-tabs {
+  display: flex;
+  gap: 8px;
+}
+
+.farm-tab {
+  padding: 8px 18px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  color: var(--text-secondary);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.farm-tab.active {
+  background: rgba(247,147,26,0.12);
+  border-color: rgba(247,147,26,0.4);
+  color: var(--btc-orange);
+}
+
+/* Farm grid */
+.farm-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.farm-card {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: all 0.2s;
+}
+
+.farm-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(247,147,26,0.1);
+}
+
+/* Card header */
+.farm-card-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.farm-icons {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.farm-pair {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 17px;
+}
+
+.farm-tags {
+  display: flex;
+  gap: 5px;
+  margin-top: 4px;
+}
+
+.farm-tag {
+  font-size: 10px;
+  padding: 2px 7px;
+  border-radius: 4px;
+  font-weight: 700;
+  font-family: var(--font-display);
+}
+
+.farm-tag.orange {
+  background: rgba(247,147,26,0.15);
+  color: var(--btc-orange);
+  border: 1px solid rgba(247,147,26,0.3);
+}
+
+.farm-tag.cyan {
+  background: rgba(0,212,170,0.12);
+  color: var(--opnet-cyan);
+  border: 1px solid rgba(0,212,170,0.25);
+}
+
+/* APR row */
+.farm-apr-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background: rgba(0,0,0,0.2);
+  border-radius: var(--radius-sm);
+  padding: 10px;
+  gap: 8px;
+}
+
+.farm-metric {
+  text-align: center;
+}
+
+.farm-metric-label {
+  font-size: 10px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 3px;
+}
+
+.farm-metric-value {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* Earn box */
+.farm-earn-box, .farm-stake-box {
+  background: rgba(0,0,0,0.2);
+  border-radius: var(--radius-sm);
+  padding: 12px;
+}
+
+.earn-label {
+  font-size: 11px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 4px;
+}
+
+.earn-amount {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.farm-earn-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.harvest-farm-btn {
+  padding: 6px 14px;
+  font-size: 12px;
+}
+
+.harvest-farm-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+/* Stake */
+.stake-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.stake-adj-btn {
+  width: 28px;
+  height: 28px;
+  background: rgba(247,147,26,0.15);
+  border: 1px solid rgba(247,147,26,0.3);
+  border-radius: 6px;
+  color: var(--btc-orange);
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.stake-adj-btn:hover {
+  background: rgba(247,147,26,0.3);
+}
+
+.stake-input-row {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.stake-input {
+  flex: 1;
+  background: rgba(0,0,0,0.3);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 7px 10px;
+  color: var(--text-primary);
+  font-size: 13px;
+  font-family: var(--font-mono);
+  outline: none;
+}
+
+.stake-input:focus {
+  border-color: var(--btc-orange);
+}
+
+.stake-btn {
+  padding: 7px 14px;
+  font-size: 13px;
+}
+
+.stake-btn.full {
+  width: 100%;
+  margin-top: 8px;
+  padding: 10px;
+}
+
+@media (max-width: 600px) {
+  .farm-grid { grid-template-columns: 1fr; }
+  .farm-header { flex-direction: column; }
+}
