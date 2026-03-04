@@ -36,7 +36,7 @@ function App() {
         <div className="footer-inner">
           <span className="footer-brand">
             <span className="text-glow-orange">Moto</span>
-            <span className="text-glow-cyan">Swap</span>
+            <span className="text-glow-cyan">Verse</span>
           </span>
           <span className="footer-sep">×</span>
           <span className="footer-opnet">OP_NET Bitcoin L1</span>
