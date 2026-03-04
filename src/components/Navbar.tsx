@@ -40,7 +40,7 @@ export default function Navbar({ page, onNavigate, walletAddress, onWalletConnec
           </div>
           <div className="logo-text">
             <span className="logo-moto">Moto</span>
-            <span className="logo-swap">Swap</span>
+            <span className="logo-swap">Verse</span>
           </div>
           <div className="logo-badge">OP_NET</div>
         </div>
